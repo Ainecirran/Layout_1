@@ -1,0 +1,99 @@
+/* ------------- header ------------- */
+header {
+    position: fixed;
+    top: 0;
+    width: 60%;
+    height: 5vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5vw;
+    transition: 1s;
+    align-items: center;
+    background-color: #222;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2vw;
+}
+
+.burger-btn {
+    display: none;
+    font-size: 3vw;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header-menu {
+    display: flex;
+    gap: 20px;
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+    font-size: 1.3vw;
+}
+a:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* ------------- header media ------------- */
+@media screen and (max-width: 800px) {
+    header {
+        background-color: #111;
+        width: 100vw;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    h1, .burger-btn {
+        font-size: 2.5vw;
+        padding: 0 5vw;
+    }
+    .burger-btn {
+        display: block;
+    }
+
+    .header-menu {
+        display: none;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100vw;
+        background-color: #111;
+    }
+    .header-menu.show {
+        display: flex;
+    }
+    .header-menu a {
+        width: 100%;
+        padding: 2vw 0 2vw 5vw;
+    }
+    a {
+        font-size: 2vw;
+    }
+    .header-menu a:hover {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        background-color: #111;
+        height: 10vw;
+    }
+
+    .header-menu {
+        gap: 0;
+    }
+    h1, .burger-btn {
+        font-size: 24px;
+    }
+    a {
+        font-size: 11px;
+    }
+}

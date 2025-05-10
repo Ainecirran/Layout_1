@@ -1,0 +1,196 @@
+/* ------------- main block ------------- */
+.main-content {
+    min-height: 50vh;
+    max-height: 100vh;
+    text-align: left;
+    display: flex;
+    background-color: #222;
+}
+
+article {
+    padding: 5vw 10vw 3vw 5vw;
+    width: 60vw;
+}
+.article-content {
+    margin-top: 15%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+h2 {
+    font-size: 4vw;
+    font-family: 'Times New Roman', Times, serif;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    margin: 10px 0;
+    font-size: 40px;
+}
+.order-btn {
+    background-color: white;
+    color: black;
+    padding: 1vw;
+    width: 15vw;
+    font-size: 1.5vw;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+}
+
+aside {
+    width: 40vw;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ------------- main block media ------------- */
+@media screen and (max-width: 800px) {
+    article {
+        padding-top: 7vw;
+        height: 80vh;
+        width: 70vw;
+    }
+    .article-content {
+        margin-top: 0;
+        height: 100%;
+    }
+    h2 {
+        font-size: 5.5vw;
+    }
+    .order-btn {
+        padding: 1vw;
+        width: 30vw;
+        font-size: 2vw;
+        border-radius: 1vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main-content {
+        flex-wrap: wrap;
+        max-height: fit-content;
+        background-color: #282829;
+    }
+    article {
+        padding: 15vw 0 5vw 5vw;
+        width: 95vw;
+        height: 70vh;
+    }
+    .article-content {
+        align-items: center;
+    }
+    h2 {
+        font-size: 6vw;
+        text-align: center;
+    }
+    li {
+        text-align: center;
+        margin-bottom: 3.5vw;
+    }
+    .order-btn {
+        font-size: 2.5vw;
+    }
+
+    aside {
+        width: 70vw;
+        margin-left: 15vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h2 {
+        font-size: 7vw;
+    }
+    .order-btn {
+        font-size: 4vw;
+        padding: 2vw;
+        width: 40vw;
+    }
+}
+
+
+/* ------------- list of advantages ------------- */
+.gallery {
+    max-height: 90vh;
+    padding: 5vw 0;
+    max-width: 100%;
+    display: flex;
+    gap: 2%;
+}
+.gallery-item {
+    flex: 1;
+}
+
+.gallery-item_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.gallery-item_list__img {
+    width: 2vw;
+    height: auto;
+}
+hr {
+    border-color: rgba(255, 255, 255, 0.25);
+}
+p {
+    text-align: center;
+    font-size: 1.5vw;
+}
+.gallery-btn {
+    width: 100%;
+}
+
+
+/* ------------- list of advantages media ------------- */
+@media screen and (max-width: 800px) {
+    .gallery-item {
+        width: 25%;
+        flex: none;
+    }
+    .gallery-item_list {
+        width: 46%;
+    }
+    .gallery-item_list__img {
+        width: 3vw;
+    }
+    p {
+        font-size: 2vw;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .gallery {
+        gap: 0;
+    }
+    .gallery-item {
+        width: 0;
+    }
+    .gallery-item_list {
+        margin-left: 10vw;
+        width: 80vw;
+        gap: 3vw;
+    }
+    p {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .gallery-item_list__img {
+        width: 4.5vw;
+    }
+    p {
+        font-size: 4vw;
+    }
+}
